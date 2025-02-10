@@ -18,8 +18,21 @@ class MacrosScreen extends StatelessWidget {
           ),
         ),
         child: Column(
+
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Align(
+              alignment: Alignment.topRight,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 10, right: 20),
+                child: IconButton(
+                  icon: Icon(Icons.account_circle, color: Colors.white, size: 40),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/profile');
+                  },
+                ),
+              ),
+            ),
             SizedBox(height: 30),
 
             ElevatedButton(

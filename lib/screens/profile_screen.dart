@@ -38,6 +38,17 @@ class _ProfileScreenState extends State<ProfileScreen> with SingleTickerProvider
               ),
               child: Column(
                 children: [
+                  // Back button
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: IconButton(
+                      icon: Icon(Icons.arrow_back, color: Colors.white),
+                      onPressed: () {
+                        Navigator.pop(context); // Navigates back
+                      },
+                    ),
+                  ),
+
                   CircleAvatar(
                     radius: 50,
                     backgroundImage: AssetImage('assets/profile_picture.png'), // Placeholder
